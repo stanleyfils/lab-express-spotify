@@ -57,7 +57,7 @@ app.get('/artists', (req, res, next) => {
 app.get('/albums/:id', (req, res, next) => {
   // .getArtistAlbums() code goes here
   spotifyApi
-    .getArtistAlbums(req.params.id)
+    .getArtistAlbums(req.params.id) //id is just a placeholder. It can be anything as long as it matches ('/albums/:id'). 
     .then(data => {
       console.log('The received data from the API: ', data.body);
       let items = data.body.items;
